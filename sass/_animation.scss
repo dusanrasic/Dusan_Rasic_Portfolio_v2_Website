@@ -1,0 +1,12 @@
+.spinner-4{
+   &:before, &:after{
+     position: absolute;
+     top: 10%;
+     left: 10%;
+     background: #eee;
+     animation: pulse 3s linear infinite;
+     opacity: 0;
+
+  &:after{
+   animation: pulse 2s linear 2.3s infinite;
+ }

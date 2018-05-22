@@ -1,0 +1,7 @@
+User-Agent: *
+Disallow:
+Disallow: /sitemap.xml
+Disallow: /css/style.css
+Disallow: /index.html
+
+Sitemap: http://dusanrasic.rs/sitemap.xml
