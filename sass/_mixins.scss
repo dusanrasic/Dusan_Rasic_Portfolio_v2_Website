@@ -1,130 +1,176 @@
-@mixin large_screen{
-  @media only screen and (max-width: 1210px){
+@mixin large_screen {
+  @media only screen and (max-width: 1210px) {
     @content;
   }
 }
-@mixin medium_screen{
-  @media only screen and (max-width: 992px){
+
+@mixin medium_screen {
+  @media only screen and (max-width: 992px) {
     @content;
   }
 }
-@mixin small_screen{
-  @media only screen and (max-width: 601px){
+
+@mixin small_screen {
+  @media only screen and (max-width: 601px) {
     @content;
   }
 }
-@mixin nsmall_screen{
-  @media only screen and (max-width: 424px){
+
+@mixin nsmall_screen {
+  @media only screen and (max-width: 424px) {
     @content;
   }
 }
-@mixin xsmall_screen{
-  @media only screen and (max-width: 330px){
+
+@mixin xsmall_screen {
+  @media only screen and (max-width: 330px) {
     @content;
   }
 }
+
 @mixin print {
-  @media print{
+  @media print {
     @content;
   }
 }
-@mixin  left_btn {
-  width: 100%;
+
+@mixin left_btn {
+  width: 110px;
+  height: 200px;
   background-color: transparent;
   box-sizing: border-box;
   cursor: pointer;
   display: flex;
+  justify-content: space-around;
+  align-items: center;
   flex-direction: row;
-  -webkit-tap-highlight-color:  rgba(255, 255, 255, 0);
-  .arrow{
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+
+  .arrow {
     position: absolute;
     left: 20px;
     width: 20px;
+    height: 100%;
     text-transform: uppercase;
     font-size: 5rem;
     width: 40px;
     text-align: center;
-    color: orangered;
-    @include small_screen{
+    color: #7EF9FF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include small_screen {
       left: 5px;
     }
-    h1{
+
+    h1 {
       font-size: 5rem;
       -webkit-animation: bouncy1 1s linear infinite;
       -moz-animation: bouncy1 1s linear infinite;
       -o-animation: bouncy1 1s linear infinite;
       animation: bouncy1 1s linear infinite;
-      @include small_screen{
+
+      @include small_screen {
         font-size: 3rem;
       }
     }
   }
-  .text{
+
+  .text {
     position: relative;
     text-transform: uppercase;
-    color: orangered;
+    color: #7EF9FF;
     text-align: center;
-    width: 150px;
-    @include small_screen{
+    box-sizing: border-box;
+    width: 50px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include small_screen {
       width: 100px;
     }
-    h2{
+
+    h2 {
       font-size: 2rem;
       transform: rotate(90deg);
-      transform-origin: bottom center;
-      margin-left: 5px;
-      @include small_screen{
+      margin-left: 20px;
+      height: 50px;
+
+      @include small_screen {
         font-size: 1.7rem;
-        margin-left: -30px;
+        margin-left: -20px;
       }
     }
   }
 }
+
 @mixin right_btn {
-  width: 100%;
+  width: 110px;
+  height: 200px;
   box-sizing: border-box;
   cursor: pointer;
   display: flex;
+  justify-content: space-around;
+  align-items: center;
   flex-direction: row;
-  -webkit-tap-highlight-color:  rgba(255, 255, 255, 0); 
-  .arrow{
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+
+  .arrow {
     position: absolute;
     right: 30px;
     width: 40px;
+    height: 100%;
     text-transform: uppercase;
     font-size: 5rem;
     text-align: center;
-    color: orangered;
-    @include small_screen{
+    color: #7EF9FF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include small_screen {
       right: 5px;
     }
-    h1{
+
+    h1 {
       font-size: 5rem;
       -webkit-animation: bouncy2 1s linear infinite;
       -moz-animation: bouncy2 1s linear infinite;
       -o-animation: bouncy2 1s linear infinite;
       animation: bouncy2 1s linear infinite;
-      @include small_screen{
+
+      @include small_screen {
         font-size: 3rem;
       }
     }
   }
-  .text{
+
+  .text {
     position: relative;
     text-transform: uppercase;
-    color: orangered;
+    color: #7EF9FF;
     text-align: center;
     box-sizing: border-box;
-    width: 150px;
-    @include small_screen{
+    width: 50px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include small_screen {
       width: 100px;
     }
-    h2{
+
+    h2 {
       font-size: 2rem;
       transform: rotate(-90deg);
-      transform-origin: bottom center;
       margin-right: 20px;
-      @include small_screen{
+      height: 50px;
+
+      @include small_screen {
         font-size: 1.7rem;
         margin-right: -20px;
       }

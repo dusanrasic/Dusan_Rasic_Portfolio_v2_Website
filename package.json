@@ -1,0 +1,23 @@
+{
+  "name": "package",
+  "version": "1.0.0",
+  "description": "**Version 1.0**",
+  "main": "index.js",
+  "scripts": {
+    "build-css": "node-sass --include-path scss sass/style.scss   css/style.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\"",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
+  "keywords": [
+    "Dusan",
+    "Rasic",
+    "Portfolio"
+  ],
+  "author": "Dusan Rasic",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^4.9.3",
+    "nodemon": "^1.18.4"
+  }
+}
